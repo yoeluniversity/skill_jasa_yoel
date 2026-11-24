@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor - Jasa Skill Yoel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/editor.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-yoel sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">Y</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Skill
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="pianis.html">Pianis</a></li>
+                <li><a class="dropdown-item" href="joki.html">Joki MLBB</a></li>
+                <li>
+                  <a class="dropdown-item active" href="editor.html">Editor</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="navbar-search-wrapper">
+            <input
+              type="text"
+              class="form-control navbar-search-input"
+              id="navbarSearchInput"
+              placeholder="Cari halaman..."
+              autocomplete="off"
+            />
+            <span class="navbar-search-icon">🔍</span>
+            <div class="search-results-dropdown" id="navbarSearchResults"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="editor-hero text-center text-white page-entrance">
+      <div class="editor-hero-overlay"></div>
+      <div class="container position-relative editor-hero-content">
+        <span class="editor-badge mb-3 d-inline-block">🎬 Yoel Editor</span>
+        <h1 class="fw-bold display-4 mb-3 editor-hero-title">
+          VIDEO &amp; FLYER MAKER
+        </h1>
+        <p class="lead text-light mx-auto" style="max-width: 720px">
+          Editing sat-set, konten anti bosan, transisi mulus, estetik, dan
+          solusi visual untuk promosi maksimal.
+        </p>
+        <div class="editor-hero-tags">
+          <span class="editor-hero-tag">📹 Video Vlog Estetik</span>
+          <span class="editor-hero-tag">🕺 Jedag Jedug Ngetrend</span>
+          <span class="editor-hero-tag">🎨 Flyer Menarik</span>
+        </div>
+        <div class="mt-4 pt-2">
+          <a
+            href="#katalog-editor"
+            class="btn btn-outline-light rounded-pill px-4 py-2 me-2 fw-semibold"
+          >
+            Lihat Katalog Layanan &darr;
+          </a>
+          <a
+            href="https://wa.me/+6285255789839"
+            target="_blank"
+            class="btn btn-light rounded-pill px-4 py-2 fw-semibold text-dark"
+          >
+            💬 Hubungi Langsung
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="py-5 editor-desc-section page-entrance-delay-1">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="editor-section-label text-uppercase"
+            >Konten Makin Menarik, Bisnis Makin Lancar</span
+          >
+          <h2 class="fw-bold text-white mt-1 mb-3">
+            Visual Berkualitas Untuk Promosi Lebih Cepat
+          </h2>
+          <p class="text-secondary mx-auto" style="max-width: 680px">
+            Video yang baik bukan sekadar memotong video, melainkan seni
+            merangkai ritme audio-visual yang mengalir alami dan menyampaikan
+            pesan secara berkesan kepada penonton. Membantu visual bisnismu
+            tampil lebih menarik, profesional, dan menjual.
+          </p>
+        </div>
+
+        <div class="editor-workstation-mockup mb-5">
+          <div class="workstation-titlebar">
+            <div class="d-flex align-items-center gap-3">
+              <div class="mac-dots">
+                <span class="mac-dot red"></span>
+                <span class="mac-dot yellow"></span>
+                <span class="mac-dot green"></span>
+              </div>
+              <span class="workstation-filename"
+                >Yoel_Editor_Project_2026_Final_Render.prproj</span
+              >
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <span
+                class="badge bg-danger text-white font-monospace small px-2 py-1"
+                >● REC 00:04:28:15</span
+              >
+              <span class="workstation-spec"
+                >3840x2160 UHD | 60 fps | ProRes 422 HQ</span
+              >
+            </div>
+          </div>
+
+          <div class="workstation-viewport">
+            <video
+              id="workstationVideo"
+              src="videos/editor3.mp4"
+              class="workstation-video"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="auto"
+              disablePictureInPicture
+              disableremoteplayback
+              tabindex="-1"
+              aria-hidden="true"
+              oncontextmenu="return false;"
+            ></video>
+          </div>
+
+          <div class="workstation-timeline">
+            <div class="timeline-controls">
+              <button
+                type="button"
+                class="btn btn-sm btn-editor-playback d-inline-flex align-items-center gap-2"
+                id="btnVideoPlayback"
+                title="Klik untuk Play atau Stop video"
+              >
+                <span id="playbackIcon">⏹</span>
+                <span id="playbackText" class="fw-semibold">Stop Video</span>
+              </button>
+              <span class="timeline-timecode" id="videoTimeDisplay">
+                <span id="currentTime">00:00</span> /
+                <span id="durationTime">00:00</span>
+              </span>
+            </div>
+            <div
+              class="timeline-track-bar"
+              id="timelineTrackBar"
+              title="Klik untuk memajukan / memundurkan video"
+            >
+              <div class="timeline-progress" id="timelineProgress"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-lg-3 col-md-6">
+            <div class="workflow-card">
+              <span class="workflow-icon">✂️</span>
+              <h5 class="workflow-title">Rhythmic Pacing</h5>
+              <p class="workflow-desc">
+                Pemotongan klip yang sinkron dengan ketukan lagu, menjaga alur
+                cerita tetap dinamis, serta mengunci perhatian 3 detik pertama
+                (hook).
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="workflow-card">
+              <span class="workflow-icon">🎨</span>
+              <h5 class="workflow-title">Cinematic Grading</h5>
+              <p class="workflow-desc">
+                Mengolah pencahayaan, kontras, dan palet warna untuk membangun
+                emosi serta konsistensi visual di setiap frame.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="workflow-card">
+              <span class="workflow-icon">🎧</span>
+              <h5 class="workflow-title">Sound Design</h5>
+              <p class="workflow-desc">
+                Lapisan efek suara (risers, whoosh, impact hits, ambience foley)
+                yang memberi kedalaman fisik dan emosi pada setiap pergerakan
+                visual.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="workflow-card">
+              <span class="workflow-icon">🎨</span>
+              <h5 class="workflow-title">Flyer Design</h5>
+              <p class="workflow-desc">
+                Jasa desain dan membuat flyer profesional yang bikin promosi
+                bisnismu makin dilirik & estetik! pengerjaan cepat & bisa
+                revisi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5 pt-3">
+          <p class="text-secondary small text-uppercase tracking-wider mb-3">
+            // SOFTWARE & CREATIVE TOOLS YANG DIGUNAKAN
+          </p>
+          <div
+            class="d-flex justify-content-center align-items-center gap-3 flex-wrap"
+          >
+            <span class="software-badge">
+              <img src="images/capcut.png" alt="CapCut" class="software-icon" />
+              CapCut
+            </span>
+            <span class="software-badge">
+              <img
+                src="images/am.png"
+                alt="Alight Motion"
+                class="software-icon"
+              />
+              Alight Motion
+            </span>
+            <span class="software-badge">
+              <img src="images/canva.png" alt="Canva" class="software-icon" />
+              Canva
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 editor-catalog-section" id="katalog-editor">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-3"
+        >
+          <div>
+            <h2 class="fw-bold text-white mb-1">
+              🎞️ Layanan Video Editing &amp; Flyer
+            </h2>
+            <p class="text-secondary mb-0">
+              Pilih layanan editing yang Anda perlukan dan pesan langsung dengan
+              mudah.
+            </p>
+          </div>
+          <button
+            class="btn btn-outline-light rounded-pill px-4 py-2"
+            data-bs-toggle="modal"
+            data-bs-target="#cartModal"
+          >
+            🛒 Keranjang Pesanan
+            <span class="badge bg-danger rounded-pill ms-1" id="cartCountBadge"
+              >0</span
+            >
+          </button>
+        </div>
+
+        <div class="editor-catalog-table-card mb-5">
+          <div
+            class="catalog-table-header d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <h5 class="fw-bold text-white mb-0">📋 Daftar Harga Layanan</h5>
+              <small class="text-secondary"
+                >Klik tombol 🛒 untuk menambahkan ke keranjang</small
+              >
+            </div>
+          </div>
+          <div class="catalog-scroll-container">
+            <table class="table table-dark catalog-table align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>Layanan</th>
+                  <th>Deskripsi</th>
+                  <th class="text-nowrap">Harga</th>
+                  <th class="text-end">Pesan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="catalog-icon">📹</span>
+                      <span class="catalog-name">Video Vlog</span>
+                    </div>
+                  </td>
+                  <td class="catalog-desc-cell">
+                    Editing video vlog lengkap: pemotongan footage, B-Roll
+                    insertion, subtitle, sound balancing, background music,
+                    intro &amp; outro branding.
+                  </td>
+                  <td><span class="catalog-price">Rp 150.000</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-editor-add btn-add-cart" data-id="1">
+                      + 🛒
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="catalog-icon">🕺</span>
+                      <span class="catalog-name">Video Jedag Jedug</span>
+                    </div>
+                  </td>
+                  <td class="catalog-desc-cell">
+                    Jasa editing video jedag jedug smooth dan on-beat
+                    menggunakan keyframe serta kurva gerakan yang presisi.
+                  </td>
+                  <td><span class="catalog-price">Rp 75.000</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-editor-add btn-add-cart" data-id="2">
+                      + 🛒
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="catalog-icon">🖼️</span>
+                      <span class="catalog-name">Flyer</span>
+                    </div>
+                  </td>
+                  <td class="catalog-desc-cell">
+                    Desain flyer promosi kreatif dan estetik menggunakan
+                    template &amp; konsep dari editor, siap cetak maupun
+                    digital.
+                  </td>
+                  <td><span class="catalog-price">Rp 50.000</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-editor-add btn-add-cart" data-id="3">
+                      + 🛒
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="catalog-icon">🎨</span>
+                      <span class="catalog-name">Flyer (Design Request)</span>
+                    </div>
+                  </td>
+                  <td class="catalog-desc-cell">
+                    Desain flyer sesuai permintaan &amp; brief khusus dari
+                    pelanggan. Konsep, warna, layout, dan konten disesuaikan
+                    keinginan Anda.
+                  </td>
+                  <td><span class="catalog-price">Rp 80.000</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-editor-add btn-add-cart" data-id="4">
+                      + 🛒
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card border-0 rounded-4 p-3 p-md-4 editor-cart-card">
+          <div
+            class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2"
+          >
+            <h4 class="fw-bold text-white mb-0">
+              🛒 Keranjang Layanan yang Dipesan
+            </h4>
+            <button
+              class="btn btn-sm btn-outline-danger rounded-pill"
+              id="btnClearCart"
+            >
+              Kosongkan Keranjang
+            </button>
+          </div>
+          <div class="cart-scroll-container">
+            <table class="table align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>Layanan</th>
+                  <th class="d-none d-sm-table-cell">Harga Satuan</th>
+                  <th class="text-center">Jumlah</th>
+                  <th>Subtotal</th>
+                  <th class="text-end">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="cartTableBody"></tbody>
+            </table>
+          </div>
+          <div id="emptyCartMessage" class="text-center py-4 text-secondary">
+            <p class="mb-0">
+              Keranjang layanan editor masih kosong. Silakan klik tombol
+              <strong class="text-light">"+ 🛒"</strong> pada tabel katalog di
+              atas!
+            </p>
+          </div>
+          <div
+            class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top border-secondary flex-wrap gap-3"
+          >
+            <h5 class="mb-0 text-white">
+              Total Estimasi:
+              <span class="fw-bold text-white fs-4" id="cartTotalPrice"
+                >Rp 0</span
+              >
+            </h5>
+            <button
+              class="btn btn-success rounded-pill px-4 py-2 fw-semibold"
+              id="btnCheckoutWA"
+            >
+              💬 Pesan / Konsultasi via WhatsApp &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button
+      class="floating-cart-btn"
+      data-bs-toggle="modal"
+      data-bs-target="#cartModal"
+      title="Lihat Keranjang Layanan"
+    >
+      🛒 <span class="floating-cart-badge" id="floatingCartBadge">0</span>
+    </button>
+
+    <div
+      class="modal fade"
+      id="cartModal"
+      tabindex="-1"
+      aria-labelledby="cartModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div
+          class="modal-content border-0 rounded-4 shadow-lg p-2"
+          style="
+            background: #171b23;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+          "
+        >
+          <div class="modal-header border-0 pb-2">
+            <h5 class="modal-title fw-bold text-white" id="cartModalLabel">
+              🛒 Keranjang Layanan Editor
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body py-2">
+            <div id="modalCartContent"></div>
+          </div>
+          <div
+            class="modal-footer border-0 pt-3 d-flex justify-content-between align-items-center flex-wrap gap-2"
+          >
+            <div class="fs-5 text-white">
+              Total:
+              <span class="fw-bold text-white fs-5" id="modalTotalPrice"
+                >Rp 0</span
+              >
+            </div>
+            <div>
+              <button
+                type="button"
+                class="btn btn-secondary rounded-pill me-2 px-3"
+                data-bs-dismiss="modal"
+              >
+                Tutup
+              </button>
+              <button
+                type="button"
+                class="btn btn-success rounded-pill px-3 fw-semibold"
+                id="btnModalCheckoutWA"
+              >
+                Pesan via WhatsApp 💬
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer custom-footer py-5 mt-auto">
+      <div class="container text-center">
+        <div class="mb-4">
+          <p class="footer-email-label mb-2">Kontak & Konsultasi</p>
+          <a
+            href="mailto:12510403@student.unklab.ac.id"
+            class="footer-email-link"
+          >
+            12510403@student.unklab.ac.id
+          </a>
+        </div>
+
+        <div
+          class="d-flex justify-content-center align-items-center gap-3 mb-4"
+        >
+          <a
+            href="https://wa.me/+6285255789839"
+            target="_blank"
+            class="footer-social-link social-wa"
+            title="WhatsApp"
+          >
+            <img src="images/wa.png" alt="WhatsApp" class="footer-icon" />
+          </a>
+          <a
+            href="#"
+            class="footer-social-link social-tiktok"
+            title="TikTok"
+            data-bs-toggle="modal"
+            data-bs-target="#tiktokModal"
+          >
+            <img src="images/tiktok.png" alt="TikTok" class="footer-icon" />
+          </a>
+          <a
+            href="https://www.instagram.com/lightningmcqueel?gwpx=MTV6YXcyeWN4NjFxeQ=="
+            target="_blank"
+            class="footer-social-link social-ig"
+            title="Instagram"
+          >
+            <img src="images/ig.png" alt="Instagram" class="footer-icon" />
+          </a>
+        </div>
+
+        <div class="footer-copyright small">
+          &copy; 2026 <strong>Yoel</strong>. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="tiktokModal"
+      tabindex="-1"
+      aria-labelledby="tiktokModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content tiktok-modal-content text-center p-3">
+          <div class="modal-header border-0 pb-0 justify-content-end">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body pt-0">
+            <div class="tiktok-modal-icon mb-3">
+              <img
+                src="images/tiktok.png"
+                alt="TikTok"
+                width="28"
+                height="28"
+              />
+            </div>
+            <h5
+              class="modal-title fw-bold text-white mb-1"
+              id="tiktokModalLabel"
+            >
+              Pilih Akun TikTok
+            </h5>
+            <p class="text-white small mb-4">
+              Silakan pilih profil TikTok yang ingin dikunjungi:
+            </p>
+            <div class="d-grid gap-2">
+              <a
+                href="https://www.tiktok.com/@bitterchocolataste?_r=1&_t=ZS-9BcBU4QkDsS"
+                target="_blank"
+                class="btn btn-tiktok-link"
+              >
+                🎮 MLBB
+              </a>
+              <a
+                href="https://www.tiktok.com/@shiver_2910?_r=1&_t=ZS-9BcBzDvgJhU"
+                target="_blank"
+                class="btn btn-tiktok-link"
+              >
+                🎹 Piano
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/editor.js"></script>
+    <script src="js/navbar.js"></script>
+  </body>
+</html>

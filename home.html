@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jasa Skill Yoel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <div class="page-intro-overlay" id="introOverlay">
+      <div class="intro-content text-center">
+        <div class="intro-logo">JASA SKILL YOEL</div>
+        <div class="intro-text">Melodies, Visuals, Victories</div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-yoel sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">Y</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Skill
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="pianis.html">Pianis</a></li>
+                <li><a class="dropdown-item" href="joki.html">Joki MLBB</a></li>
+                <li><a class="dropdown-item" href="editor.html">Editor</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="navbar-search-wrapper">
+            <input
+              type="text"
+              class="form-control navbar-search-input"
+              id="navbarSearchInput"
+              placeholder="Cari halaman..."
+              autocomplete="off"
+            />
+            <span class="navbar-search-icon">🔍</span>
+            <div class="search-results-dropdown" id="navbarSearchResults"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="3500"
+      data-bs-pause="false"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="pianis.html" class="slide-link">
+            <img src="images/pianis.png" class="d-block w-100" alt="..." />
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Pesan jasa pianis di yoel de pianis.</h5>
+            <a href="pianis.html" class="btn btn-pianis mb-3">Kunjungi</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="joki.html" class="slide-link">
+            <img src="images/mlbb.png" class="d-block w-100" alt="..." />
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <a href="joki.html" class="btn btn-joki mb-3">Kunjungi</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="editor.html" class="slide-link">
+            <img src="images/editor.png" class="d-block w-100" alt="..." />
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <a href="editor.html" class="btn btn-editor mb-3">Kunjungi</a>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <section class="services-section py-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h3 class="fw-bold section-title">Pilih Layanan</h3>
+          <p class="text-muted small">
+            Solusi keahlian profesional untuk berbagai kebutuhan Anda
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="service-card text-center">
+              <div>
+                <div class="service-icon-box icon-pianis">🎹</div>
+                <h4 class="service-title">Jasa Pianis</h4>
+                <p class="service-desc">
+                  Pengiring musik piano untuk pernikahan, ibadah, instrumen
+                  cafe, dan perayaan spesial Anda dengan alunan melodi berkelas.
+                </p>
+              </div>
+              <a href="pianis.html" class="btn btn-service btn-pianis-card">
+                Lihat Detail &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card text-center">
+              <div>
+                <div class="service-icon-box icon-joki">🎮</div>
+                <h4 class="service-title">Joki MLBB</h4>
+                <p class="service-desc">
+                  Layanan joki Mobile Legends cepat, aman, dan terpercaya.
+                  Naikkan tier dan rank impian kamu dengan win rate terjaga.
+                </p>
+              </div>
+              <a href="joki.html" class="btn btn-service btn-joki-card">
+                Lihat Detail &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card text-center">
+              <div>
+                <div class="service-icon-box icon-editor">🎬</div>
+                <h4 class="service-title">Editor Video & Flyer</h4>
+                <p class="service-desc">
+                  Editing video vlog dan pembuatan flyer promosi kreatif yang
+                  estetik dan siap memikat audiens.
+                </p>
+              </div>
+              <a href="editor.html" class="btn btn-service btn-editor-card">
+                Lihat Detail &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer custom-footer py-5 mt-auto">
+      <div class="container text-center">
+        <!-- Informasi Email -->
+        <div class="mb-4">
+          <p class="footer-email-label mb-2">Kontak & Konsultasi</p>
+          <a
+            href="mailto:12510403@student.unklab.ac.id"
+            class="footer-email-link"
+          >
+            12510403@student.unklab.ac.id
+          </a>
+        </div>
+
+        <div
+          class="d-flex justify-content-center align-items-center gap-3 mb-4"
+        >
+          <a
+            href="https://wa.me/+6285255789839"
+            target="_blank"
+            class="footer-social-link social-wa"
+            title="WhatsApp"
+          >
+            <img src="images/wa.png" alt="WhatsApp" class="footer-icon" />
+          </a>
+          <a
+            href="#"
+            class="footer-social-link social-tiktok"
+            title="TikTok"
+            data-bs-toggle="modal"
+            data-bs-target="#tiktokModal"
+          >
+            <img src="images/tiktok.png" alt="TikTok" class="footer-icon" />
+          </a>
+          <a
+            href="https://www.instagram.com/lightningmcqueel?gwpx=MTV6YXcyeWN4NjFxeQ=="
+            target="_blank"
+            class="footer-social-link social-ig"
+            title="Instagram"
+          >
+            <img src="images/ig.png" alt="Instagram" class="footer-icon" />
+          </a>
+        </div>
+
+        <div class="footer-copyright small">
+          &copy; 2026 <strong>Yoel</strong>. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="tiktokModal"
+      tabindex="-1"
+      aria-labelledby="tiktokModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content tiktok-modal-content text-center p-3">
+          <div class="modal-header border-0 pb-0 justify-content-end">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body pt-0">
+            <div class="tiktok-modal-icon mb-3">
+              <img
+                src="images/tiktok.png"
+                alt="TikTok"
+                width="28"
+                height="28"
+              />
+            </div>
+            <h5
+              class="modal-title fw-bold text-white mb-1"
+              id="tiktokModalLabel"
+            >
+              Pilih Akun TikTok
+            </h5>
+            <p class="text-white small mb-4">
+              Pilih profil TikTok yang ingin dikunjungi:
+            </p>
+            <div class="d-grid gap-2">
+              <a
+                href="https://www.tiktok.com/@bitterchocolataste?_r=1&_t=ZS-9BcBU4QkDsS"
+                target="_blank"
+                class="btn btn-tiktok-link"
+              >
+                🎮 MLBB
+              </a>
+              <a
+                href="https://www.tiktok.com/@shiver_2910?_r=1&_t=ZS-9BcBzDvgJhU"
+                target="_blank"
+                class="btn btn-tiktok-link"
+              >
+                🎹 Piano
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/home.js"></script>
+    <script src="js/navbar.js"></script>
+  </body>
+</html>
