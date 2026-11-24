@@ -2,7 +2,7 @@
   const pages = [
     {
       name: "Home",
-      url: "home.html",
+      url: "index.html",
       emoji: "🏠",
       desc: "Beranda utama Jasa Skill Yoel",
       keywords: ["home", "beranda", "utama", "halaman utama"],
