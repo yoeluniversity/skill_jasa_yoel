@@ -17,6 +17,17 @@
     <nav class="navbar navbar-expand-lg navbar-yoel sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Y</a>
+        <div class="navbar-search-wrapper">
+          <input
+            type="text"
+            class="form-control navbar-search-input"
+            id="navbarSearchInput"
+            placeholder="Cari halaman..."
+            autocomplete="off"
+          />
+          <span class="navbar-search-icon">🔍</span>
+          <div class="search-results-dropdown" id="navbarSearchResults"></div>
+        </div>
         <button
           class="navbar-toggler"
           type="button"
@@ -55,17 +66,6 @@
               </ul>
             </li>
           </ul>
-          <div class="navbar-search-wrapper">
-            <input
-              type="text"
-              class="form-control navbar-search-input"
-              id="navbarSearchInput"
-              placeholder="Cari halaman..."
-              autocomplete="off"
-            />
-            <span class="navbar-search-icon">🔍</span>
-            <div class="search-results-dropdown" id="navbarSearchResults"></div>
-          </div>
         </div>
       </div>
     </nav>
@@ -531,11 +531,10 @@
               <tbody id="cartTableBody"></tbody>
             </table>
           </div>
-          <div id="emptyCartMessage" class="text-center py-4 text-secondary">
-            <p class="mb-0">
+          <div id="emptyCartMessage" class="text-center py-4">
+            <p class="mb-0 text-white" style="color: #ffffff !important;">
               Keranjang joki masih kosong. Silakan klik tombol
-              <strong class="text-cyan-gaming">"+ Keranjang"</strong> pada tabel
-              di atas!
+              <strong class="text-cyan-gaming">"+ 🛒"</strong> untuk memesan!
             </p>
           </div>
           <div

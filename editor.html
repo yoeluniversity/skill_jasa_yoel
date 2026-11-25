@@ -17,6 +17,17 @@
     <nav class="navbar navbar-expand-lg navbar-yoel sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Y</a>
+        <div class="navbar-search-wrapper">
+          <input
+            type="text"
+            class="form-control navbar-search-input"
+            id="navbarSearchInput"
+            placeholder="Cari halaman..."
+            autocomplete="off"
+          />
+          <span class="navbar-search-icon">🔍</span>
+          <div class="search-results-dropdown" id="navbarSearchResults"></div>
+        </div>
         <button
           class="navbar-toggler"
           type="button"
@@ -55,17 +66,6 @@
               </ul>
             </li>
           </ul>
-          <div class="navbar-search-wrapper">
-            <input
-              type="text"
-              class="form-control navbar-search-input"
-              id="navbarSearchInput"
-              placeholder="Cari halaman..."
-              autocomplete="off"
-            />
-            <span class="navbar-search-icon">🔍</span>
-            <div class="search-results-dropdown" id="navbarSearchResults"></div>
-          </div>
         </div>
       </div>
     </nav>
@@ -309,7 +309,7 @@
                   <th>Layanan</th>
                   <th>Deskripsi</th>
                   <th class="text-nowrap">Harga</th>
-                  <th class="text-end">Pesan</th>
+                  <th class="text-center catalog-col-action">Pesan</th>
                 </tr>
               </thead>
               <tbody>
@@ -326,7 +326,7 @@
                     intro &amp; outro branding.
                   </td>
                   <td><span class="catalog-price">Rp 150.000</span></td>
-                  <td class="text-end">
+                  <td class="text-center catalog-col-action">
                     <button class="btn btn-editor-add btn-add-cart" data-id="1">
                       + 🛒
                     </button>
@@ -344,7 +344,7 @@
                     menggunakan keyframe serta kurva gerakan yang presisi.
                   </td>
                   <td><span class="catalog-price">Rp 75.000</span></td>
-                  <td class="text-end">
+                  <td class="text-center catalog-col-action">
                     <button class="btn btn-editor-add btn-add-cart" data-id="2">
                       + 🛒
                     </button>
@@ -363,7 +363,7 @@
                     digital.
                   </td>
                   <td><span class="catalog-price">Rp 50.000</span></td>
-                  <td class="text-end">
+                  <td class="text-center catalog-col-action">
                     <button class="btn btn-editor-add btn-add-cart" data-id="3">
                       + 🛒
                     </button>
@@ -382,7 +382,7 @@
                     keinginan Anda.
                   </td>
                   <td><span class="catalog-price">Rp 80.000</span></td>
-                  <td class="text-end">
+                  <td class="text-center catalog-col-action">
                     <button class="btn btn-editor-add btn-add-cart" data-id="4">
                       + 🛒
                     </button>
@@ -424,8 +424,7 @@
           <div id="emptyCartMessage" class="text-center py-4 text-secondary">
             <p class="mb-0">
               Keranjang layanan editor masih kosong. Silakan klik tombol
-              <strong class="text-light">"+ 🛒"</strong> pada tabel katalog di
-              atas!
+              <strong class="text-light">"+ 🛒"</strong> untuk memesan!
             </p>
           </div>
           <div

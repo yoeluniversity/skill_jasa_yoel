@@ -449,7 +449,8 @@ textarea {
 .catalog-scroll-container {
   max-height: 420px;
   overflow-y: auto;
-  overflow-x: hidden !important;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.2) rgba(18, 22, 29, 0.6);
 }
@@ -551,6 +552,12 @@ textarea {
   white-space: nowrap;
 }
 
+.catalog-col-action {
+  min-width: 105px;
+  width: 110px;
+  text-align: center !important;
+}
+
 .btn-editor-add {
   background: #252b38;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -560,7 +567,11 @@ textarea {
   border-radius: 25px;
   padding: 6px 14px;
   white-space: nowrap;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
 }
 
 .btn-editor-add:hover {
@@ -575,6 +586,7 @@ textarea {
   background: #22c55e !important;
   border-color: #22c55e !important;
   color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.35);
 }
 
 .editor-cart-card {
@@ -932,14 +944,26 @@ textarea {
   }
   .catalog-table td,
   .catalog-table th {
-    padding: 12px 10px !important;
+    padding: 10px 8px !important;
   }
   .catalog-desc-cell {
-    font-size: 0.82rem !important;
-    line-height: 1.4 !important;
+    font-size: 0.8rem !important;
+    line-height: 1.35 !important;
+    max-width: 200px;
   }
   .catalog-table-header {
     padding: 1rem 1.15rem;
+  }
+  .catalog-col-action {
+    min-width: 95px;
+    width: 95px;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+  .btn-editor-add {
+    padding: 5px 8px;
+    font-size: 0.78rem;
+    min-width: 52px;
   }
 }
 
@@ -952,6 +976,9 @@ textarea {
     padding: 10px 6px !important;
     font-size: 0.84rem;
   }
+  .editor-cart-card .table td .d-sm-none {
+    color: #ffffff !important;
+  }
   .btn-editor-counter {
     padding: 3px 6px !important;
     font-size: 0.75rem !important;
@@ -961,20 +988,43 @@ textarea {
     padding-right: 6px !important;
     font-size: 0.75rem !important;
   }
+  .catalog-table td,
+  .catalog-table th {
+    padding: 8px 4px !important;
+  }
   .catalog-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 1.1rem;
-    border-radius: 8px;
+    width: 26px;
+    height: 26px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    flex-shrink: 0;
   }
   .catalog-name {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
+    line-height: 1.25;
+  }
+  .catalog-desc-cell {
+    font-size: 0.72rem !important;
+    line-height: 1.3 !important;
+    max-width: 125px;
+    min-width: 85px;
   }
   .catalog-price {
-    font-size: 0.95rem;
+    font-size: 0.82rem !important;
+  }
+  .catalog-col-action {
+    min-width: 92px;
+    width: 92px;
+    padding-left: 2px !important;
+    padding-right: 4px !important;
   }
   .btn-editor-add {
-    padding: 5px 10px;
-    font-size: 0.78rem;
+    padding: 4px 8px;
+    font-size: 0.72rem;
+    min-width: 48px;
+  }
+  .btn-editor-add.btn-added-active {
+    padding: 4px 6px;
+    font-size: 0.72rem;
   }
 }

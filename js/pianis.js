@@ -194,8 +194,56 @@ function renderCart() {
   }
 }
 
+function initPianoVideos() {
+  const wrappers = document.querySelectorAll(".piano-video-wrapper");
+
+  wrappers.forEach((wrapper) => {
+    const video = wrapper.querySelector(".piano-video-player");
+    const cover = wrapper.querySelector(".piano-video-cover");
+    const playBtn = wrapper.querySelector(".piano-play-btn");
+
+    if (!video || !cover) return;
+
+    const handlePlayClick = (e) => {
+      if (e) e.stopPropagation();
+      if (video.ended) {
+        video.currentTime = 0;
+      }
+      video.play().catch((err) => {
+        console.warn("Pemutaran video terhenti atau diblokir:", err);
+      });
+    };
+
+    cover.addEventListener("click", handlePlayClick);
+    if (playBtn) {
+      playBtn.addEventListener("click", handlePlayClick);
+    }
+
+    video.addEventListener("play", () => {
+      document.querySelectorAll(".piano-video-player").forEach((otherVid) => {
+        if (otherVid !== video && !otherVid.paused) {
+          otherVid.pause();
+        }
+      });
+
+      cover.classList.add("is-hidden");
+      cover.classList.add("video-started");
+      video.controls = true;
+    });
+
+    video.addEventListener("pause", () => {
+      cover.classList.remove("is-hidden");
+    });
+
+    video.addEventListener("ended", () => {
+      cover.classList.remove("is-hidden");
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderCart();
+  initPianoVideos();
 
   document.querySelectorAll(".btn-add-cart").forEach((button) => {
     button.addEventListener("click", () => {

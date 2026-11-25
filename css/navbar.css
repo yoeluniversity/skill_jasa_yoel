@@ -154,6 +154,20 @@
   margin-left: auto;
 }
 
+@media (min-width: 992px) {
+  .navbar-yoel .navbar-brand {
+    order: 1;
+  }
+  .navbar-yoel .navbar-collapse {
+    order: 2;
+    flex-grow: 1;
+  }
+  .navbar-yoel .navbar-search-wrapper {
+    order: 3;
+    margin-left: auto;
+  }
+}
+
 .navbar-search-input {
   background: rgba(255, 255, 255, 0.07) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
@@ -345,8 +359,36 @@
 }
 
 @media (max-width: 991.98px) {
+  .navbar-yoel .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-yoel .navbar-brand {
+    order: 1;
+    margin-right: 0;
+  }
+
+  .navbar-search-wrapper {
+    order: 2;
+    flex: 1 1 auto;
+    max-width: 250px;
+    margin: 0 10px;
+    position: relative;
+  }
+
+  .navbar-yoel .navbar-toggler {
+    order: 3;
+    margin-left: 0;
+  }
+
   .navbar-yoel .navbar-collapse {
-    padding-top: 16px;
+    order: 4;
+    flex-basis: 100%;
+    width: 100%;
+    padding-top: 14px;
   }
 
   .navbar-yoel .navbar-nav .nav-link {
@@ -359,18 +401,27 @@
     display: none;
   }
 
-  .navbar-search-wrapper {
-    margin-left: 0;
-    margin-top: 12px;
-    width: 100%;
-  }
-
   .navbar-search-input {
     width: 100% !important;
+    font-size: 0.82rem;
+    padding: 6px 14px 6px 34px !important;
   }
 
   .navbar-search-input:focus {
     width: 100% !important;
+  }
+
+  .navbar-search-icon {
+    left: 12px;
+    font-size: 0.8rem;
+  }
+
+  .search-results-dropdown {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: calc(100vw - 32px) !important;
+    max-width: 340px !important;
   }
 
   .navbar-yoel .dropdown-menu {
@@ -379,6 +430,28 @@
     box-shadow: none;
     margin-top: 4px !important;
     padding-left: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-yoel .navbar-brand {
+    padding: 3px 10px;
+    font-size: 1.25rem;
+  }
+
+  .navbar-search-wrapper {
+    margin: 0 6px;
+    max-width: 190px;
+  }
+
+  .navbar-search-input {
+    font-size: 0.78rem;
+    padding: 5px 10px 5px 28px !important;
+  }
+
+  .navbar-search-icon {
+    left: 9px;
+    font-size: 0.75rem;
   }
 }
 

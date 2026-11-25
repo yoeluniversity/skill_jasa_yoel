@@ -17,6 +17,17 @@
     <nav class="navbar navbar-expand-lg navbar-yoel sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Y</a>
+        <div class="navbar-search-wrapper">
+          <input
+            type="text"
+            class="form-control navbar-search-input"
+            id="navbarSearchInput"
+            placeholder="Cari halaman..."
+            autocomplete="off"
+          />
+          <span class="navbar-search-icon">🔍</span>
+          <div class="search-results-dropdown" id="navbarSearchResults"></div>
+        </div>
         <button
           class="navbar-toggler"
           type="button"
@@ -55,17 +66,6 @@
               </ul>
             </li>
           </ul>
-          <div class="navbar-search-wrapper">
-            <input
-              type="text"
-              class="form-control navbar-search-input"
-              id="navbarSearchInput"
-              placeholder="Cari halaman..."
-              autocomplete="off"
-            />
-            <span class="navbar-search-icon">🔍</span>
-            <div class="search-results-dropdown" id="navbarSearchResults"></div>
-          </div>
         </div>
       </div>
     </nav>
@@ -137,6 +137,94 @@
                 >
                   <h4 class="fw-bold mb-0">100%</h4>
                   <small class="highlight-label">Live Performance</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-5 video-showcase-section page-entrance-delay-2"
+      id="videoShowcase"
+    >
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold mt-1 mb-2 text-white">
+            Cuplikan Gaya Suara Piano Yoel
+          </h2>
+          <p class="video-section-subtitle mx-auto" style="max-width: 620px">
+            Tekan tombol play pada video untuk mulai menonton.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-6 col-md-10">
+            <div class="piano-video-card">
+              <div class="piano-video-wrapper" id="pianoVideoWrapper1">
+                <video
+                  id="pianoVideo1"
+                  class="piano-video-player"
+                  src="videos/pianis2.mp4"
+                  preload="metadata"
+                  playsinline
+                ></video>
+
+                <div
+                  class="piano-video-cover"
+                  id="pianoVideoCover1"
+                  title="Klik untuk memutar video"
+                >
+                  <img
+                    src="images/pianis2_thumb.jpg"
+                    alt="Sampul Video Penampilan Piano 1"
+                    class="piano-cover-img"
+                  />
+                  <div class="piano-cover-overlay">
+                    <button
+                      type="button"
+                      class="piano-play-btn"
+                      aria-label="Putar Video Penampilan Piano 1"
+                    >
+                      <span class="play-icon">▶</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-10">
+            <div class="piano-video-card">
+              <div class="piano-video-wrapper" id="pianoVideoWrapper2">
+                <video
+                  id="pianoVideo2"
+                  class="piano-video-player"
+                  src="videos/pianis3.mp4"
+                  preload="metadata"
+                  playsinline
+                ></video>
+
+                <div
+                  class="piano-video-cover"
+                  id="pianoVideoCover2"
+                  title="Klik untuk memutar video"
+                >
+                  <img
+                    src="images/pianis3_thumb.jpeg"
+                    alt="Sampul Video Penampilan Piano 2"
+                    class="piano-cover-img"
+                  />
+                  <div class="piano-cover-overlay">
+                    <button
+                      type="button"
+                      class="piano-play-btn"
+                      aria-label="Putar Video Penampilan Piano 2"
+                    >
+                      <span class="play-icon">▶</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -313,8 +401,8 @@
               <tbody id="cartTableBody"></tbody>
             </table>
           </div>
-          <div id="emptyCartMessage" class="text-center py-4 text-muted">
-            <p class="mb-0">
+          <div id="emptyCartMessage" class="text-center py-4 text-white">
+            <p class="mb-0" style="color: #ffffff !important">
               Keranjang masih kosong. Silakan klik tombol
               <strong>"+ Tambah Keranjang"</strong> pada paket di atas!
             </p>

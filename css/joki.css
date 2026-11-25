@@ -845,3 +845,9 @@ textarea {
     font-size: 0.75rem !important;
   }
 }
+
+#modalCartContent p,
+#emptyCartMessage,
+#emptyCartMessage p {
+  color: #ffffff !important;
+}

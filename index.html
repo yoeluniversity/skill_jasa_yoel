@@ -24,6 +24,17 @@
     <nav class="navbar navbar-expand-lg navbar-yoel sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Y</a>
+        <div class="navbar-search-wrapper">
+          <input
+            type="text"
+            class="form-control navbar-search-input"
+            id="navbarSearchInput"
+            placeholder="Cari halaman..."
+            autocomplete="off"
+          />
+          <span class="navbar-search-icon">🔍</span>
+          <div class="search-results-dropdown" id="navbarSearchResults"></div>
+        </div>
         <button
           class="navbar-toggler"
           type="button"
@@ -62,17 +73,6 @@
               </ul>
             </li>
           </ul>
-          <div class="navbar-search-wrapper">
-            <input
-              type="text"
-              class="form-control navbar-search-input"
-              id="navbarSearchInput"
-              placeholder="Cari halaman..."
-              autocomplete="off"
-            />
-            <span class="navbar-search-icon">🔍</span>
-            <div class="search-results-dropdown" id="navbarSearchResults"></div>
-          </div>
         </div>
       </div>
     </nav>
@@ -214,7 +214,6 @@
 
     <footer class="footer custom-footer py-5 mt-auto">
       <div class="container text-center">
-        <!-- Informasi Email -->
         <div class="mb-4">
           <p class="footer-email-label mb-2">Kontak & Konsultasi</p>
           <a

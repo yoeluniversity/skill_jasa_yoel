@@ -170,7 +170,7 @@ function renderCart() {
 
   if (modalContent) {
     if (cart.length === 0) {
-      modalContent.innerHTML = `<p class="text-muted text-center py-4 mb-0">Keranjang joki masih kosong.</p>`;
+      modalContent.innerHTML = `<p class="text-white text-center py-4 mb-0 fw-semibold" style="color: #ffffff !important;">Keranjang joki masih kosong.</p>`;
     } else {
       modalContent.innerHTML = `
         <div class="list-group list-group-flush">

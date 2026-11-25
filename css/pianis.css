@@ -656,3 +656,210 @@ textarea {
   border: 2px solid #ffffff;
   padding: 0 4px;
 }
+
+.video-showcase-section {
+  background-color: #0b0c10;
+  background-image:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(255, 255, 255, 0.03) 0%,
+      transparent 65%
+    ),
+    linear-gradient(180deg, #0a0a0a 0%, #0e0e0e 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.video-section-badge {
+  color: #94a3b8;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.video-section-subtitle {
+  color: #888888;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.piano-video-card {
+  background: #14161d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.piano-video-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.7);
+}
+
+.piano-video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+  overflow: hidden;
+}
+
+.piano-video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #000000;
+}
+
+.piano-video-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  cursor: pointer;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.piano-video-cover.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.piano-video-cover.video-started .piano-cover-img {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.piano-video-cover.video-started {
+  height: calc(100% - 50px);
+}
+
+.piano-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.piano-video-card:hover .piano-cover-img {
+  transform: scale(1.03);
+}
+
+.piano-cover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: background 0.3s ease;
+}
+
+.piano-video-cover.video-started .piano-cover-overlay {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(1px);
+}
+
+.piano-video-cover:hover .piano-cover-overlay {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.piano-play-btn {
+  margin: 0;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.5),
+    0 0 0 8px rgba(255, 255, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.piano-play-btn .play-icon {
+  font-size: 1.5rem;
+  color: #0c0e14;
+  margin-left: 4px;
+  line-height: 1;
+}
+
+.piano-video-cover:hover .piano-play-btn {
+  transform: scale(1.12);
+  background: #ffffff;
+  box-shadow:
+    0 6px 28px rgba(255, 255, 255, 0.35),
+    0 0 0 12px rgba(255, 255, 255, 0.22);
+}
+
+.piano-cover-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.piano-video-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 4px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.piano-video-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.piano-video-caption {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.82rem;
+}
+
+#emptyCartMessage,
+#emptyCartMessage p {
+  color: #ffffff !important;
+}
+
+@media (max-width: 576px) {
+  .piano-play-btn {
+    width: 54px;
+    height: 54px;
+  }
+  .piano-play-btn .play-icon {
+    font-size: 1.2rem;
+    margin-left: 3px;
+  }
+  .piano-cover-overlay {
+    padding: 14px;
+  }
+  .piano-video-title {
+    font-size: 0.98rem;
+  }
+  .piano-video-caption {
+    font-size: 0.76rem;
+  }
+}

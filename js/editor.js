@@ -144,9 +144,8 @@ function renderCart() {
         <tr>
           <td>
             <div class="fw-bold text-white fs-6">${item.name}</div>
-            <div class="d-flex align-items-center gap-2 mt-1 flex-wrap">
-              <span class="badge bg-secondary text-light small">${item.category}</span>
-              <span class="d-sm-none text-muted small">(${formatRupiah(item.price)}/unit)</span>
+            <div class="mt-1">
+              <span class="d-sm-none text-white small" style="color: #ffffff !important;">(${formatRupiah(item.price)}/unit)</span>
             </div>
           </td>
           <td class="text-nowrap text-secondary d-none d-sm-table-cell">${formatRupiah(item.price)}</td>
@@ -177,7 +176,7 @@ function renderCart() {
 
   if (modalContent) {
     if (cart.length === 0) {
-      modalContent.innerHTML = `<p class="text-secondary text-center py-4 mb-0">Keranjang layanan editor masih kosong.</p>`;
+      modalContent.innerHTML = `<p class="text-white text-center py-4 mb-0" style="color: #ffffff !important;">Keranjang layanan editor masih kosong.</p>`;
     } else {
       modalContent.innerHTML = `
         <div class="list-group list-group-flush">
